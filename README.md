@@ -12,9 +12,10 @@ This repo is a [LIMP](https://github.com/masaar/limp) [Package](https://github.c
 3. Unifonic gateway requires following args:
    1. `phone`: Target phone number using international format with prefixed `+`. Type `str`.
    2. `content`: Message body. Type `str`.
-4. Use Unifonic gateway using LIMP Gateway Controller:
+4. Unifnoic gateway accepts optional arg, namely `unifonic_auth`, replicating `unifonic` value in `vars Config Attr` for dynamic Unifonic API credentials.
+5. Use Unifonic gateway using LIMP Gateway Controller:
 ```python
 from gateway import Gateway
 
-Gateway.send('unifonic', phone=phone, content=content)
+Gateway.send(gateway='unifonic', phone=phone, content=content)
 ```
